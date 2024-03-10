@@ -1,0 +1,223 @@
+/* styles.css */
+
+/* General styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Updated font */
+    margin: 0;
+    padding:0;
+    background-color: #f3f9fe; /* Light gray background */
+}
+
+.header {
+    text-align: center;
+    background-color: #292d31; /* Green background color */
+    color: rgb(249, 248, 251); /* White text color */
+    padding: 20px; /* Padding around the heading */
+    margin-bottom: 20px; /* Margin below the heading */
+    font-weight: bold; /* Font weight */
+    /* text-transform: uppercase; Uppercase text */
+    letter-spacing: 2px; /* Increased letter spacing */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1)
+}
+
+h3 {
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Board styles */
+.board {
+    display: flex;
+}
+
+.column {
+    flex: 1;
+    padding: 20px;
+    padding-right: 0;
+    box-sizing: border-box;
+    border: 1px solid rgb(100, 100, 100);
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px #ccc;
+}
+
+/* Task styles */
+.tasks {
+    /* border: 1px solid #ccc; */
+    border-radius: 3px;
+    margin: 20px;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    gap: 0.3rem;
+    /* background-color: #fff;  */
+}
+
+.task {
+    border: 0.3px solid #ccc; /* Light gray border */
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 94, 0.2) 0px 4px 5px 0px;
+    text-transform: capitalize;
+    transition: all 0.3s ease; /* Moved transition here for consistency */
+    background-color: #fff; 
+}
+
+.task p {
+    margin: 0; /* Removed margin-top for consistency */
+    margin-top: 0.5rem;
+}
+
+.task:hover {
+    box-shadow: rgba(100, 100, 94, 0.2) 0px 8px 16px 0px;
+    transform: translateY(-5px);
+}
+
+/* New Task Button styles */
+.new-task-btn {
+    color: #fff; /* White text color */
+    font-size: 1rem;
+    margin-top: 20px; /* Adjusted margin */
+    border: none;
+    background: #4CAF50; /* Green background */
+    cursor: pointer;
+    padding: 10px 15px; /* Increased padding */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.new-task-btn:hover {
+    background: #45a049; /* Darker green on hover */
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    border-radius: 10px;
+    background-color: #fefefe;
+    transform: translate(100%, 30%);
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+}
+
+.modal-content input,
+.modal-content select,
+.modal-content textarea {
+    width: 95%;
+    box-shadow: rgba(100, 100, 94, 0.2) 0px 4px 5px 0px;
+    padding: 8px;
+    border: 0.2px solid #888;
+    border-radius: 5px;
+}
+
+.modal-content input:focus,
+.modal-content select:focus,
+.modal-content textarea:focus {
+    outline: none;
+}
+
+.modal-content select {
+    width: 100%;
+}
+
+/* Heading styles */
+.heading {
+    padding: 5px;
+    border-radius: 3px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Count styles */
+.count {
+    color: #194244;
+}
+
+/* Button styles */
+.btn {
+    padding: 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+/* Menu styles */
+.menu {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-btn {
+    cursor: pointer;
+    color: rgb(13, 57, 57);
+    margin-right: 5px;
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    background-color: #02110d; /* Red background color */
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(251, 250, 250, 0.1);
+    padding: 12px 16px;
+    z-index: 1;
+    right: 0;
+    font-size: 15px;
+    color: white; 
+}
+
+
+.menu-content a {
+    color: #89f10b;
+    padding: 8px 0;
+    display: block;
+    text-decoration: none;
+}
+
+.menu-content a:hover {
+    background-color: #f4f3f3;
+} 
+
+.menu-content.show {
+    display: block;
+}
+
+
+.myblock{
+    border-radius: 20px;
+    padding: 8px;
+}
+
+.mybtn{
+    width: 95%;
+}
+.mybtn:hover
+{
+    transform:scale(1.05);
+    box-shadow: 2px 2px #ccc;
+}
+.trashcan:hover
+{
+    transform:scale(1.05);
+    opacity:0.5;
+}
